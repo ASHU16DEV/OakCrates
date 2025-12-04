@@ -1,0 +1,232 @@
+# OakCrates - Crates Configuration
+# Each crate has its own section with rewards, key settings, and hologram config
+
+crates:
+  # Example crate - Rank Crate
+  rank_crate:
+    display-name: "&d&lRank Crate"
+    gui-size: 27
+    key-type: "VIRTUAL"  # VIRTUAL, PHYSICAL, or BOTH
+    max-rewards-per-key: 1
+    per-player-total-claim-limit: 0  # 0 = unlimited
+
+    # Physical key item (only used if key-type is PHYSICAL or BOTH)
+    physical-key:
+      material: "TRIPWIRE_HOOK"
+      name: "&d&lRank Crate Key"
+      lore:
+        - "&7Use this key at the"
+        - "&dRank Crate &7to claim rewards!"
+      glow: true
+      custom-model-data: 0
+
+    # Hologram settings for this crate
+    hologram:
+      enabled: true
+      lines:
+        - "&d&lRank Crate"
+        - "&7Your Keys: &e%player_keys%"
+        - "&7Click to open!"
+      height: 2.5
+
+    # Bound blocks (format: world:x:y:z)
+    bound-blocks: []
+
+    # Rewards
+    rewards:
+      vip_rank:
+        slot: 10
+        display-item:
+          material: "EMERALD"
+          amount: 1
+          name: "&a&lVIP Rank"
+          lore:
+            - "&7Claim the VIP rank!"
+            - ""
+            - "&aPerks:"
+            - "&7- Access to /fly"
+            - "&7- Special chat prefix"
+            - ""
+            - "&e&lClick to claim!"
+          glow: true
+        per-player-claim-limit: 1  # 0 = unlimited
+        global-claim-limit: 0
+        permission-required: ""
+        commands:
+          - "lp user %player% parent add vip"
+          - "broadcast &a%player% &7has claimed &aVIP &7from the &dRank Crate&7!"
+        items: []
+
+      mvp_rank:
+        slot: 12
+        display-item:
+          material: "DIAMOND"
+          amount: 1
+          name: "&b&lMVP Rank"
+          lore:
+            - "&7Claim the MVP rank!"
+            - ""
+            - "&aPerks:"
+            - "&7- Everything in VIP"
+            - "&7- Access to /heal"
+            - "&7- 2x McMMO XP"
+            - ""
+            - "&e&lClick to claim!"
+          glow: true
+        per-player-claim-limit: 1
+        global-claim-limit: 50
+        permission-required: ""
+        commands:
+          - "lp user %player% parent add mvp"
+          - "broadcast &a%player% &7has claimed &bMVP &7from the &dRank Crate&7!"
+        items: []
+
+      money_100k:
+        slot: 14
+        display-item:
+          material: "GOLD_INGOT"
+          amount: 1
+          name: "&6&l$100,000"
+          lore:
+            - "&7Get $100,000 added to"
+            - "&7your account!"
+            - ""
+            - "&e&lClick to claim!"
+          glow: false
+        per-player-claim-limit: 0
+        global-claim-limit: 0
+        permission-required: ""
+        commands:
+          - "eco give %player% 100000"
+          - "msg %player% &aYou received $100,000!"
+        items: []
+
+      op_sword:
+        slot: 16
+        display-item:
+          material: "DIAMOND_SWORD"
+          amount: 1
+          name: "&c&lOP Sword"
+          lore:
+            - "&7A powerful diamond sword!"
+            - ""
+            - "&7Enchantments:"
+            - "&7- Sharpness V"
+            - "&7- Unbreaking III"
+            - "&7- Fire Aspect II"
+            - ""
+            - "&e&lClick to claim!"
+          glow: true
+        per-player-claim-limit: 1
+        global-claim-limit: 0
+        permission-required: ""
+        commands: []
+        items:
+          - material: "DIAMOND_SWORD"
+            amount: 1
+            name: "&c&lOP Sword"
+            lore:
+              - "&7From the Rank Crate"
+            enchantments:
+              DAMAGE_ALL: 5
+              DURABILITY: 3
+              FIRE_ASPECT: 2
+            unbreakable: false
+
+  # Example crate - Weapon Crate
+  weapon_crate:
+    display-name: "&c&lWeapon Crate"
+    gui-size: 27
+    key-type: "BOTH"
+    max-rewards-per-key: 1
+    per-player-total-claim-limit: 0
+
+    physical-key:
+      material: "TRIPWIRE_HOOK"
+      name: "&c&lWeapon Crate Key"
+      lore:
+        - "&7Use this key at the"
+        - "&cWeapon Crate &7to claim rewards!"
+      glow: true
+      custom-model-data: 1
+
+    hologram:
+      enabled: true
+      lines:
+        - "&c&lWeapon Crate"
+        - "&7Your Keys: &e%player_keys%"
+      height: 2.5
+
+    bound-blocks: []
+
+    rewards:
+      diamond_sword:
+        slot: 11
+        display-item:
+          material: "DIAMOND_SWORD"
+          amount: 1
+          name: "&b&lDiamond Sword"
+          lore:
+            - "&7A sharp diamond sword!"
+            - ""
+            - "&e&lClick to claim!"
+          glow: false
+        per-player-claim-limit: 0
+        global-claim-limit: 0
+        permission-required: ""
+        commands: []
+        items:
+          - material: "DIAMOND_SWORD"
+            amount: 1
+            name: "&b&lDiamond Sword"
+            enchantments:
+              DAMAGE_ALL: 3
+              DURABILITY: 2
+
+      bow:
+        slot: 13
+        display-item:
+          material: "BOW"
+          amount: 1
+          name: "&6&lPower Bow"
+          lore:
+            - "&7A powerful bow!"
+            - ""
+            - "&e&lClick to claim!"
+          glow: true
+        per-player-claim-limit: 0
+        global-claim-limit: 0
+        permission-required: ""
+        commands: []
+        items:
+          - material: "BOW"
+            amount: 1
+            name: "&6&lPower Bow"
+            enchantments:
+              ARROW_DAMAGE: 4
+              ARROW_INFINITE: 1
+              DURABILITY: 3
+
+      trident:
+        slot: 15
+        display-item:
+          material: "TRIDENT"
+          amount: 1
+          name: "&9&lLoyalty Trident"
+          lore:
+            - "&7A loyal trident!"
+            - ""
+            - "&e&lClick to claim!"
+          glow: true
+        per-player-claim-limit: 1
+        global-claim-limit: 100
+        permission-required: ""
+        commands: []
+        items:
+          - material: "TRIDENT"
+            amount: 1
+            name: "&9&lLoyalty Trident"
+            enchantments:
+              LOYALTY: 3
+              RIPTIDE: 2
+              DURABILITY: 3

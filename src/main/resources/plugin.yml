@@ -1,0 +1,76 @@
+name: OakCrates
+version: ${project.version}
+main: dev.ashu16.oakcrates.OakCrates
+api-version: 1.16
+author: ASHU16
+description: Advanced selectable crate plugin with in-game GUI editors
+softdepend: []
+
+commands:
+  oakcrates:
+    description: Main admin command for OakCrates
+    usage: /<command> <args>
+    aliases: [ocr, ocrate]
+  keys:
+    description: View your crate keys
+    usage: /<command>
+  key:
+    description: View your crate keys
+    usage: /<command>
+
+permissions:
+  oakcrates.admin:
+    description: Full admin access to OakCrates
+    default: op
+    children:
+      oakcrates.admin.help: true
+      oakcrates.admin.create: true
+      oakcrates.admin.delete: true
+      oakcrates.admin.list: true
+      oakcrates.admin.edit: true
+      oakcrates.admin.setblock: true
+      oakcrates.admin.removeblock: true
+      oakcrates.admin.reload: true
+      oakcrates.admin.keys.give: true
+      oakcrates.admin.keys.take: true
+      oakcrates.admin.keys.set: true
+      oakcrates.admin.keys.view: true
+  oakcrates.admin.help:
+    description: Access to help command
+    default: op
+  oakcrates.admin.create:
+    description: Create new crates
+    default: op
+  oakcrates.admin.delete:
+    description: Delete crates
+    default: op
+  oakcrates.admin.list:
+    description: List all crates
+    default: op
+  oakcrates.admin.edit:
+    description: Edit crate settings via GUI
+    default: op
+  oakcrates.admin.setblock:
+    description: Bind crate to a block
+    default: op
+  oakcrates.admin.removeblock:
+    description: Remove block binding from crate
+    default: op
+  oakcrates.admin.reload:
+    description: Reload plugin configuration
+    default: op
+  oakcrates.admin.keys.give:
+    description: Give keys to players
+    default: op
+  oakcrates.admin.keys.take:
+    description: Take keys from players
+    default: op
+  oakcrates.admin.keys.set:
+    description: Set player key amount
+    default: op
+  oakcrates.admin.keys.view:
+    description: View player keys
+    default: op
+  oakcrates.use:
+    description: Allow player to use crates and view keys
+    default: true

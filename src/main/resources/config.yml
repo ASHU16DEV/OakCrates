@@ -1,0 +1,117 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        OakCrates Configuration
+#                         Author: ASHU16
+#                          Version: 1.0
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Plugin prefix for messages
+prefix: "&8[&a&lOak&eCrates&8] &r"
+
+# Default GUI size (9, 18, 27, 36, 45, 54)
+default-gui-size: 27
+
+# Show crates with 0 keys in /keys command
+show-zero-keys: true
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Discord Integration
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Enable Discord bot integration for reward claim notifications
+discord:
+  enabled: false
+  # Your Discord bot token (get from Discord Developer Portal)
+  token: "YOUR_BOT_TOKEN_HERE"
+  # Discord user ID of the bot owner (can use bot commands)
+  owner-id: "YOUR_DISCORD_USER_ID"
+  # Channel ID where reward claim notifications will be sent
+  # Use /oakcrates discord setchannel <channel_id> to set this in-game
+  channel-id: ""
+  # Embed settings for reward claim notifications
+  embed:
+    title: "Crate Reward Claimed!"
+    color: "#00FF00"
+    footer: "OakCrates by ASHU16"
+    show-timestamp: true
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        Hologram Settings
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+hologram:
+  enabled: true
+  update-interval: 100  # Ticks (100 = 5 seconds)
+  view-distance: 10  # Blocks
+  default-height: 2.5  # Blocks above crate block
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        Sound Settings
+# Set to "NONE" to disable a sound
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+sounds:
+  open-preview-gui: "BLOCK_ENDER_CHEST_OPEN"
+  open-crate-gui: "BLOCK_ENDER_CHEST_OPEN"
+  select-reward: "ENTITY_PLAYER_LEVELUP"
+  no-key: "ENTITY_VILLAGER_NO"
+  confirm-click: "UI_BUTTON_CLICK"
+  cancel-click: "UI_BUTTON_CLICK"
+  animation-tick: "BLOCK_NOTE_BLOCK_PLING"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        GUI Settings
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+gui:
+  filler-item:
+    material: "GRAY_STAINED_GLASS_PANE"
+    name: " "
+  back-button:
+    material: "ARROW"
+    name: "&7« Back"
+    slot: 45
+  close-button:
+    material: "BARRIER"
+    name: "&c✕ Close"
+    slot: 49
+  next-page:
+    material: "ARROW"
+    name: "&aNext Page »"
+  prev-page:
+    material: "ARROW"
+    name: "&c« Previous Page"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        Animation Settings
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+animations:
+  # Duration of animations in ticks (20 ticks = 1 second)
+  spin-duration: 40
+  cascade-duration: 30
+  spiral-duration: 40
+  # Particle density (1 = low, 2 = medium, 3 = high)
+  particle-density: 2
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        Logging Settings
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+logging:
+  claims:
+    enabled: true
+    console: true
+    file: true
+    file-path: "logs/claims.log"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        Database Settings
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+database:
+  type: "SQLITE"  # Only SQLite supported in v1.0
+  file: "data/oakcrates.db"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                        Performance Settings
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+performance:
+  # Use async database operations (recommended for large servers)
+  async-database: true
+  # Cache player keys in memory (reduces database queries)
+  cache-keys: true
+  # Cache duration in seconds
+  cache-duration: 300

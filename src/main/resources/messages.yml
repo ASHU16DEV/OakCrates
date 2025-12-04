@@ -1,0 +1,154 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                    OakCrates Messages Configuration
+#                           Author: ASHU16
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Use & for color codes
+# Placeholders: %player%, %crate_name%, %crate_display_name%, %reward_name%, %amount%, %player_keys%
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                         General Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+no-permission: "&c&l✘ &cInsufficient permissions to perform this action."
+player-only: "&c&l✘ &cThis command requires a player context."
+crate-not-found: "&c&l✘ &cCrate '&f%crate_name%&c' does not exist."
+player-not-found: "&c&l✘ &cPlayer '&f%player%&c' could not be found."
+invalid-amount: "&c&l✘ &cPlease provide a valid numerical value."
+reload-success: "&a&l✔ &aConfiguration reloaded successfully!"
+reload-fail: "&c&l✘ &cReload failed. Please check console for details."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                     Crate Management Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+crate-created: "&a&l✔ &aCrate '&f%crate_name%&a' has been created."
+crate-already-exists: "&c&l✘ &cA crate named '&f%crate_name%&c' already exists."
+crate-deleted: "&a&l✔ &aCrate '&f%crate_name%&a' has been deleted."
+crate-delete-confirm: "&e&l⚠ &eConfirm deletion of '&f%crate_name%&e'? Type &c/oakcrates confirm &eto proceed."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Block Binding Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+block-bind-mode: "&e&l⚙ &eRight-click a block to link it to '&f%crate_name%&e'."
+block-bound: "&a&l✔ &aBlock successfully linked to '&f%crate_name%&a'."
+block-already-bound: "&c&l✘ &cThis block is already assigned to a crate."
+block-unbound: "&a&l✔ &aBlock unlinked from '&f%crate_name%&a'."
+block-not-bound: "&c&l✘ &cNo blocks are linked to this crate."
+block-bind-cancelled: "&c&l✘ &cBlock binding cancelled."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                          Key Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+keys-given: "&a&l✔ &aGranted &e%amount% &akey(s) for &f%crate_display_name% &ato &e%player%&a."
+keys-taken: "&a&l✔ &aRemoved &e%amount% &akey(s) for &f%crate_display_name% &afrom &e%player%&a."
+keys-set: "&a&l✔ &aSet &e%player%&a's keys for &f%crate_display_name% &ato &e%amount%&a."
+keys-received: "&a&l✔ &aYou received &e%amount% &akey(s) for &f%crate_display_name%&a!"
+keys-removed: "&c&l✘ &c%amount% &ckey(s) for &f%crate_display_name% &cwere deducted."
+not-enough-keys: "&c&l✘ &cTarget player has insufficient keys."
+
+# Keys Command Display
+keys-header:
+  - ""
+  - "&8&l┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+  - "&8&l┃       &a&lYour Crate Keys         &8&l┃"
+  - "&8&l┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
+keys-format: "&8&l┃  &7%crate_display_name%&8: &e%amount% &7key(s)"
+keys-footer:
+  - "&8&l┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+  - ""
+keys-empty: "&8&l┃  &7You have no keys at this time."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                      Crate Interaction
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+no-key-chat: "&c&l✘ &cYou need a key to open this crate."
+no-key-title:
+  enabled: true
+  title: "&c&lNo Key Found"
+  subtitle: "&7Obtain a key to open this crate"
+  fade-in: 10
+  stay: 40
+  fade-out: 10
+inventory-full: "&c&l✘ &cYour inventory is full! Please make some space before claiming your reward."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Reward Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+reward-claimed: "&a&l✔ &aSuccessfully claimed &e%reward_name% &afrom &d%crate_display_name%&a!"
+reward-limit-reached: "&c&l✘ &cYou have reached the maximum claims for this reward."
+global-limit-reached: "&c&l✘ &cThis reward has reached its global claim limit."
+permission-required: "&c&l✘ &cYou lack the required permission for this reward."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       GUI Titles
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+preview-title: "&8Preview: %crate_display_name%"
+preview-lore-info: "&7Preview Mode - Use a key to claim rewards"
+
+selection-title: "&8Select Reward: %crate_display_name%"
+selection-click-to-claim: "&a&l▸ Click to Claim"
+
+confirm-title: "&8Confirm Selection"
+confirm-yes:
+  material: "LIME_STAINED_GLASS_PANE"
+  name: "&a&l✔ CONFIRM"
+  lore:
+    - "&8━━━━━━━━━━━━━━━━━━━━"
+    - "&7Click to claim this reward."
+    - "&7This will consume &e1 key&7."
+    - "&8━━━━━━━━━━━━━━━━━━━━"
+confirm-no:
+  material: "RED_STAINED_GLASS_PANE"
+  name: "&c&l✘ CANCEL"
+  lore:
+    - "&8━━━━━━━━━━━━━━━━━━━━"
+    - "&7Click to go back."
+    - "&8━━━━━━━━━━━━━━━━━━━━"
+confirm-reward-display:
+  lore:
+    - ""
+    - "&8━━━━━━━━━━━━━━━━━━━━"
+    - "&7Selected Reward:"
+    - "&e%reward_name%"
+    - "&8━━━━━━━━━━━━━━━━━━━━"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Admin GUI Titles
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+admin-main-title: "&8Edit: %crate_display_name%"
+admin-rewards-title: "&8Rewards: %crate_display_name%"
+admin-keys-title: "&8Keys: %crate_display_name%"
+admin-settings-title: "&8Settings: %crate_display_name%"
+admin-hologram-title: "&8Hologram: %crate_display_name%"
+admin-lore-title: "&8Lore Editor"
+admin-item-builder-title: "&8Item Builder"
+admin-sounds-title: "&8Sounds: %crate_display_name%"
+admin-commands-title: "&8Commands: %reward_name%"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Admin Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+edit-saved: "&a&l✔ &aChanges saved successfully!"
+edit-cancelled: "&c&l✘ &cChanges cancelled."
+chat-input-prompt: "&e&l⌨ &eType your input in chat (&c'cancel'&e to abort):"
+chat-input-cancelled: "&c&l✘ &cInput cancelled."
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Help Command
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+help-header:
+  - ""
+  - "&8&l┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+  - "&8&l┃      &a&lOakCrates Commands        &8&l┃"
+  - "&8&l┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"
+help-format: "&8&l┃ &a/%command% &8- &7%description%"
+help-footer:
+  - "&8&l┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+  - ""
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#                       Discord Messages
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+discord-channel-set: "&a&l✔ &aDiscord notification channel has been set."
+discord-channel-not-set: "&c&l✘ &cDiscord channel is not configured."
+discord-not-enabled: "&c&l✘ &cDiscord integration is not enabled."
+discord-connected: "&a&l✔ &aDiscord bot connected successfully!"
+discord-disconnected: "&c&l✘ &cDiscord bot disconnected."
